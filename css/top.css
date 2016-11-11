@@ -1,0 +1,100 @@
+/* line 2, ../scss/top.scss */
+body {
+  margin: 0;
+}
+
+/* line 5, ../scss/top.scss */
+.loader {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  -moz-transition: opacity 2s;
+  -o-transition: opacity 2s;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+}
+/* line 14, ../scss/top.scss */
+.loaded .loader {
+  opacity: 0;
+}
+/* line 17, ../scss/top.scss */
+.completed .loader {
+  display: none;
+}
+/* line 20, ../scss/top.scss */
+.change-page .loader {
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+/* line 25, ../scss/top.scss */
+.loader-icon {
+  opacity: 0;
+  background: #ebedee;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  animation: contort 2s ease-out infinite;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+/* line 33, ../scss/top.scss */
+.loader-icon.visible {
+  opacity: 1;
+}
+/* line 36, ../scss/top.scss */
+.loader-icon.stopped {
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+/* line 40, ../scss/top.scss */
+.loader-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  -moz-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 48, ../scss/top.scss */
+.loader-wrapper.micro {
+  -moz-transform: translate(-50%, -50%) scale(0);
+  -ms-transform: translate(-50%, -50%) scale(0);
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes contort {
+  0% {
+    transform: rotate(0deg);
+    border-radius: 0;
+  }
+  50% {
+    transform: rotate(90deg);
+    border-radius: 50%;
+    background: #c0392b;
+  }
+  100% {
+    transform: rotate(180deg);
+    border-radius: 0;
+  }
+}
+
+/*# sourceMappingURL=top.css.map */
